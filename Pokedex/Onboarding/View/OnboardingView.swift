@@ -15,31 +15,12 @@ struct OnboardingView: View {
       if viewModel.showSplashScreen {
         SplashView()
       } else {
-        TabView(selection: $viewModel.currentStep) {
-          ForEach(0..<viewModel.onboardingSteps.count, id: \.self) {
-            index in
-            VStack(spacing: 24) {
-              trainersImage(index: index)
-                
-              titleAndDescription(
-                title: viewModel.onboardingSteps[index].title,
-                description: viewModel.onboardingSteps[index].description
-              )
-          
-              onboardingProgress
-              
-              continueButton(
-                text: viewModel.onboardingSteps[index].buttonText
-              )
-                
-              }
+        tabViewContent
+          .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
+          .background(Color("grayscale-50"))
+          .overlay {
+            pageIndicator
           }
-          .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, maxHeight: .infinity, alignment: .bottom)
-          .padding(.horizontal, 16)
-          .padding(.bottom, 40)
-        }
-        .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
-        .background(Color("grayscale-50"))
       }
     }
     .onAppear {
@@ -50,6 +31,47 @@ struct OnboardingView: View {
       }
     }
     
+  }
+  
+  var tabViewContent: some View {
+    TabView(selection: $viewModel.currentStep) {
+      ForEach(Array(viewModel.onboardingSteps.enumerated()), id: \.offset) {
+        index, step in
+        VStack(spacing: 48) {
+          trainersImage(index: index)
+          
+          titleAndDescription(
+            title: step.title,
+            description: step.description
+          )
+          
+          continueButton(
+            text: step.buttonText
+          )
+          
+        }
+      }
+      .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, maxHeight: .infinity, alignment: .bottom)
+      .padding(.horizontal, 16)
+      .padding(.bottom, 40)
+    }
+  }
+  
+  var pageIndicator: some View {
+    HStack(spacing: 8) {
+      ForEach(viewModel.onboardingSteps.indices, id: \.self) {
+        index in
+        let widthBasedOnCurrentStep: CGFloat = viewModel.currentStep == index ? 32 : 8
+        let colorBasedOnCurrentStep: String = viewModel.currentStep == index ? "bluescale-00" : "bluescale-50"
+        
+        Capsule()
+          .frame(width: widthBasedOnCurrentStep, height: 8)
+          .foregroundStyle(Color(colorBasedOnCurrentStep))
+          .animation(.bouncy, value: viewModel.currentStep)
+      }
+    }
+    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
+    .padding(.bottom, 100)
   }
   
   func trainersImage(index: Int) -> some View {
@@ -68,42 +90,15 @@ struct OnboardingView: View {
   func titleAndDescription(title: String, description: String) -> some View {
     VStack(spacing: 16) {
       Text(title)
-        .font(.custom("Poppins-Medium", size: 26))
+        .font(FontMaker.makeFont(.poppinsMedium, 26))
         .multilineTextAlignment(.center)
         .foregroundStyle(Color("grayscale-950"))
       
       
       Text(description)
-        .font(.custom("Poppins-Regular", size: 14))
+        .font(FontMaker.makeFont(.poppinsRegular, 14))
         .multilineTextAlignment(.center)
         .foregroundStyle(Color("grayscale-600"))
-    }
-  }
-  
-  @ViewBuilder
-  var onboardingProgress: some View {
-    if viewModel.currentStep == 0  {
-      HStack(spacing: 8) {
-        Rectangle()
-          .frame(width: 32, height: 8)
-          .clipShape(.capsule)
-          .foregroundStyle(Color("bluescale-00"))
-        
-        Circle()
-          .frame(height: 8)
-          .foregroundStyle(Color("bluescale-50"))
-      }
-    } else {
-      HStack(spacing: 8) {
-        Circle()
-          .frame(height: 8)
-          .foregroundStyle(Color("bluescale-50"))
-        
-        Rectangle()
-          .frame(width: 32, height: 8)
-          .clipShape(.capsule)
-          .foregroundStyle(Color("bluescale-00"))
-      }
     }
   }
   
@@ -120,7 +115,7 @@ struct OnboardingView: View {
         .overlay {
           Text(text)
             .foregroundStyle(Color("grayscale-00"))
-            .font(.custom("Poppins-Bold", size: 16))
+            .font(FontMaker.makeFont(.poppinsBold, 16))
         }
     })
   }

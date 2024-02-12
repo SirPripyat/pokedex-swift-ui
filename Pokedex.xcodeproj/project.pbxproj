@@ -15,6 +15,7 @@
 		B644ED9B2B79415B0066A0E5 /* PokedexUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B644ED9A2B79415B0066A0E5 /* PokedexUITestsLaunchTests.swift */; };
 		B67D10F72B7945C3008EC941 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67D10F62B7945C3008EC941 /* OnboardingView.swift */; };
 		B67D11002B7952D1008EC941 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B67D10FF2B7952D1008EC941 /* Colors.xcassets */; };
+		B687D5862B7A3BDD00B4678C /* FontMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B687D5852B7A3BDC00B4678C /* FontMaker.swift */; };
 		B6CCD45C2B7994E600E8D0DF /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CCD45B2B7994E600E8D0DF /* OnboardingViewModel.swift */; };
 		B6CCD45E2B79964D00E8D0DF /* OnboardingStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CCD45D2B79964D00E8D0DF /* OnboardingStep.swift */; };
 		B6CCD4612B79A1FA00E8D0DF /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CCD4602B79A1FA00E8D0DF /* SplashView.swift */; };
@@ -55,6 +56,7 @@
 		B67D10FE2B79518B008EC941 /* Poppins-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-Light.ttf"; path = "../../../../../../Downloads/Poppins-Light.ttf"; sourceTree = "<group>"; };
 		B67D10FF2B7952D1008EC941 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		B67D11012B795607008EC941 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		B687D5852B7A3BDC00B4678C /* FontMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontMaker.swift; sourceTree = "<group>"; };
 		B6CCD45B2B7994E600E8D0DF /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
 		B6CCD45D2B79964D00E8D0DF /* OnboardingStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingStep.swift; sourceTree = "<group>"; };
 		B6CCD4602B79A1FA00E8D0DF /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
@@ -195,6 +197,7 @@
 				B67D10FD2B79518B008EC941 /* Poppins-Medium.ttf */,
 				B67D10FC2B79518B008EC941 /* Poppins-Regular.ttf */,
 				B67D10FB2B79518B008EC941 /* Poppins-SemiBold.ttf */,
+				B687D5852B7A3BDC00B4678C /* FontMaker.swift */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -341,6 +344,7 @@
 				B67D10F72B7945C3008EC941 /* OnboardingView.swift in Sources */,
 				B6CCD45C2B7994E600E8D0DF /* OnboardingViewModel.swift in Sources */,
 				B6CCD4612B79A1FA00E8D0DF /* SplashView.swift in Sources */,
+				B687D5862B7A3BDD00B4678C /* FontMaker.swift in Sources */,
 				B6CCD45E2B79964D00E8D0DF /* OnboardingStep.swift in Sources */,
 				B644ED7E2B7941560066A0E5 /* PokedexApp.swift in Sources */,
 			);
