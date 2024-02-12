@@ -15,6 +15,8 @@
 		B644ED9B2B79415B0066A0E5 /* PokedexUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B644ED9A2B79415B0066A0E5 /* PokedexUITestsLaunchTests.swift */; };
 		B67D10F72B7945C3008EC941 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67D10F62B7945C3008EC941 /* OnboardingView.swift */; };
 		B67D11002B7952D1008EC941 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B67D10FF2B7952D1008EC941 /* Colors.xcassets */; };
+		B6CCD45C2B7994E600E8D0DF /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CCD45B2B7994E600E8D0DF /* OnboardingViewModel.swift */; };
+		B6CCD45E2B79964D00E8D0DF /* OnboardingStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CCD45D2B79964D00E8D0DF /* OnboardingStep.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +54,8 @@
 		B67D10FE2B79518B008EC941 /* Poppins-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-Light.ttf"; path = "../../../../../../Downloads/Poppins-Light.ttf"; sourceTree = "<group>"; };
 		B67D10FF2B7952D1008EC941 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		B67D11012B795607008EC941 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		B6CCD45B2B7994E600E8D0DF /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
+		B6CCD45D2B79964D00E8D0DF /* OnboardingStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingStep.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +153,7 @@
 		B644EDA82B7943580066A0E5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B6CCD45D2B79964D00E8D0DF /* OnboardingStep.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -164,6 +169,7 @@
 		B644EDAA2B7943620066A0E5 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				B6CCD45B2B7994E600E8D0DF /* OnboardingViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -322,6 +328,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B67D10F72B7945C3008EC941 /* OnboardingView.swift in Sources */,
+				B6CCD45C2B7994E600E8D0DF /* OnboardingViewModel.swift in Sources */,
+				B6CCD45E2B79964D00E8D0DF /* OnboardingStep.swift in Sources */,
 				B644ED7E2B7941560066A0E5 /* PokedexApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
