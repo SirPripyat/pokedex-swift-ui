@@ -9,6 +9,7 @@ import SwiftUI
 
 class OnboardingViewModel: ObservableObject {
   @Published var currentStep: Int  = 0
+  
   @Published var onboardingSteps: [OnboardingStep] = [
     OnboardingStep(
       title: "Todos os Pokémons em um só Lugar",
@@ -21,4 +22,6 @@ class OnboardingViewModel: ObservableObject {
       buttonText: "Vamos começar!"
     )
   ]
+  
+  @Published var showSplashScreen: Bool = true
 }

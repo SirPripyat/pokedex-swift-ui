@@ -9,38 +9,52 @@ import SwiftUI
 
 struct OnboardingView: View {
   @ObservedObject var viewModel: OnboardingViewModel
+  
   var body: some View {
-    TabView(selection: $viewModel.currentStep) {
-      ForEach(0..<viewModel.onboardingSteps.count, id: \.self) {
-        index in
-        VStack(spacing: 24) {
-            trainersImage
-            
-            titleAndDescription(
-              title: viewModel.onboardingSteps[index].title,
-              description: viewModel.onboardingSteps[index].description
-            )
-        
-            onboardingProgress
-            
-            continueButton(
-              text: viewModel.onboardingSteps[index].buttonText
-            )
-            
+    ZStack {
+      if viewModel.showSplashScreen {
+        SplashView()
+      } else {
+        TabView(selection: $viewModel.currentStep) {
+          ForEach(0..<viewModel.onboardingSteps.count, id: \.self) {
+            index in
+            VStack(spacing: 24) {
+              trainersImage(index: index)
+                
+              titleAndDescription(
+                title: viewModel.onboardingSteps[index].title,
+                description: viewModel.onboardingSteps[index].description
+              )
+          
+              onboardingProgress
+              
+              continueButton(
+                text: viewModel.onboardingSteps[index].buttonText
+              )
+                
+              }
           }
+          .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, maxHeight: .infinity, alignment: .bottom)
+          .padding(.horizontal, 16)
+          .padding(.bottom, 40)
+        }
+        .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
+        .background(Color("grayscale-50"))
       }
-      .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, maxHeight: .infinity, alignment: .bottom)
-      .padding(.horizontal, 16)
-      .padding(.bottom, 40)
     }
-    .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
-    .background(Color("grayscale-50"))
+    .onAppear {
+      DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+        withAnimation {
+          self.viewModel.showSplashScreen = false
+        }
+      }
+    }
+    
   }
   
-  var trainersImage: some View {
+  func trainersImage(index: Int) -> some View {
     
-    let trainerImage =
-      viewModel.currentStep == 0 ? "trainersGroup" : "trainerHilda"
+    let trainerImage = index == 0 ? "trainersGroup" : "trainerHilda"
     
     
     return ZStack {

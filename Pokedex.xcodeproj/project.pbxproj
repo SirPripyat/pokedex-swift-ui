@@ -17,6 +17,7 @@
 		B67D11002B7952D1008EC941 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B67D10FF2B7952D1008EC941 /* Colors.xcassets */; };
 		B6CCD45C2B7994E600E8D0DF /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CCD45B2B7994E600E8D0DF /* OnboardingViewModel.swift */; };
 		B6CCD45E2B79964D00E8D0DF /* OnboardingStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CCD45D2B79964D00E8D0DF /* OnboardingStep.swift */; };
+		B6CCD4612B79A1FA00E8D0DF /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CCD4602B79A1FA00E8D0DF /* SplashView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		B67D11012B795607008EC941 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		B6CCD45B2B7994E600E8D0DF /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
 		B6CCD45D2B79964D00E8D0DF /* OnboardingStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingStep.swift; sourceTree = "<group>"; };
+		B6CCD4602B79A1FA00E8D0DF /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 		B644ED7C2B7941560066A0E5 /* Pokedex */ = {
 			isa = PBXGroup;
 			children = (
+				B6CCD45F2B79A1E700E8D0DF /* Splash */,
 				B67D11012B795607008EC941 /* Info.plist */,
 				B67D10F82B794F19008EC941 /* Utils */,
 				B644EDA72B7942D80066A0E5 /* Onboarding */,
@@ -194,6 +197,14 @@
 				B67D10FB2B79518B008EC941 /* Poppins-SemiBold.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		B6CCD45F2B79A1E700E8D0DF /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				B6CCD4602B79A1FA00E8D0DF /* SplashView.swift */,
+			);
+			path = Splash;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -329,6 +340,7 @@
 			files = (
 				B67D10F72B7945C3008EC941 /* OnboardingView.swift in Sources */,
 				B6CCD45C2B7994E600E8D0DF /* OnboardingViewModel.swift in Sources */,
+				B6CCD4612B79A1FA00E8D0DF /* SplashView.swift in Sources */,
 				B6CCD45E2B79964D00E8D0DF /* OnboardingStep.swift in Sources */,
 				B644ED7E2B7941560066A0E5 /* PokedexApp.swift in Sources */,
 			);
