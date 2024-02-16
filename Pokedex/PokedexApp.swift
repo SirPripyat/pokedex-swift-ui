@@ -9,10 +9,9 @@ import SwiftUI
 
 @main
 struct PokedexApp: App {
-    var body: some Scene {
-        WindowGroup {
-          OnboardingView(viewModel: OnboardingViewModel())
-
-        }
-    }
+	var body: some Scene {
+		WindowGroup {
+			OnboardingView(viewModel: OnboardingViewModel())
+		}
+	}
 }

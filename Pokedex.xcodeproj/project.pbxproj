@@ -13,6 +13,12 @@
 		B644ED8F2B79415B0066A0E5 /* PokedexTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B644ED8E2B79415B0066A0E5 /* PokedexTests.swift */; };
 		B644ED992B79415B0066A0E5 /* PokedexUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B644ED982B79415B0066A0E5 /* PokedexUITests.swift */; };
 		B644ED9B2B79415B0066A0E5 /* PokedexUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B644ED9A2B79415B0066A0E5 /* PokedexUITestsLaunchTests.swift */; };
+		B67361262B7D789F00CF6ABC /* PokedexView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67361252B7D789F00CF6ABC /* PokedexView.swift */; };
+		B673612A2B7D7A5200CF6ABC /* BottomBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67361292B7D7A5200CF6ABC /* BottomBarView.swift */; };
+		B673612E2B7D7B4E00CF6ABC /* BottomBarItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B673612D2B7D7B4E00CF6ABC /* BottomBarItemView.swift */; };
+		B67361312B7D7C3800CF6ABC /* BottomBarItensType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67361302B7D7C3800CF6ABC /* BottomBarItensType.swift */; };
+		B67361342B7D7D5B00CF6ABC /* BottomBarItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67361332B7D7D5B00CF6ABC /* BottomBarItemModel.swift */; };
+		B67361372B7D9C6500CF6ABC /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67361362B7D9C6500CF6ABC /* SearchBarView.swift */; };
 		B67D10F72B7945C3008EC941 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67D10F62B7945C3008EC941 /* OnboardingView.swift */; };
 		B67D11002B7952D1008EC941 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B67D10FF2B7952D1008EC941 /* Colors.xcassets */; };
 		B687D5862B7A3BDD00B4678C /* FontMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B687D5852B7A3BDC00B4678C /* FontMaker.swift */; };
@@ -48,6 +54,12 @@
 		B644ED942B79415B0066A0E5 /* PokedexUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PokedexUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B644ED982B79415B0066A0E5 /* PokedexUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokedexUITests.swift; sourceTree = "<group>"; };
 		B644ED9A2B79415B0066A0E5 /* PokedexUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokedexUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B67361252B7D789F00CF6ABC /* PokedexView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokedexView.swift; sourceTree = "<group>"; };
+		B67361292B7D7A5200CF6ABC /* BottomBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomBarView.swift; sourceTree = "<group>"; };
+		B673612D2B7D7B4E00CF6ABC /* BottomBarItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomBarItemView.swift; sourceTree = "<group>"; };
+		B67361302B7D7C3800CF6ABC /* BottomBarItensType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomBarItensType.swift; sourceTree = "<group>"; };
+		B67361332B7D7D5B00CF6ABC /* BottomBarItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomBarItemModel.swift; sourceTree = "<group>"; };
+		B67361362B7D9C6500CF6ABC /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
 		B67D10F62B7945C3008EC941 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		B67D10FA2B79518B008EC941 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-Bold.ttf"; path = "../../../../../../Downloads/Poppins-Bold.ttf"; sourceTree = "<group>"; };
 		B67D10FB2B79518B008EC941 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-SemiBold.ttf"; path = "../../../../../../Downloads/Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
@@ -110,6 +122,10 @@
 		B644ED7C2B7941560066A0E5 /* Pokedex */ = {
 			isa = PBXGroup;
 			children = (
+				B673612F2B7D7C1A00CF6ABC /* Types */,
+				B673612B2B7D7AC600CF6ABC /* BottomBarItem */,
+				B67361272B7D7A1D00CF6ABC /* BottomBar */,
+				B6E75AEF2B7D777D00CD31DD /* Pokedex */,
 				B6CCD45F2B79A1E700E8D0DF /* Splash */,
 				B67D11012B795607008EC941 /* Info.plist */,
 				B67D10F82B794F19008EC941 /* Utils */,
@@ -179,6 +195,55 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		B67361272B7D7A1D00CF6ABC /* BottomBar */ = {
+			isa = PBXGroup;
+			children = (
+				B67361282B7D7A2500CF6ABC /* View */,
+			);
+			path = BottomBar;
+			sourceTree = "<group>";
+		};
+		B67361282B7D7A2500CF6ABC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B67361292B7D7A5200CF6ABC /* BottomBarView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B673612B2B7D7AC600CF6ABC /* BottomBarItem */ = {
+			isa = PBXGroup;
+			children = (
+				B67361322B7D7C8000CF6ABC /* Model */,
+				B673612C2B7D7ACC00CF6ABC /* View */,
+			);
+			path = BottomBarItem;
+			sourceTree = "<group>";
+		};
+		B673612C2B7D7ACC00CF6ABC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B673612D2B7D7B4E00CF6ABC /* BottomBarItemView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B673612F2B7D7C1A00CF6ABC /* Types */ = {
+			isa = PBXGroup;
+			children = (
+				B67361302B7D7C3800CF6ABC /* BottomBarItensType.swift */,
+			);
+			path = Types;
+			sourceTree = "<group>";
+		};
+		B67361322B7D7C8000CF6ABC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B67361332B7D7D5B00CF6ABC /* BottomBarItemModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		B67D10F82B794F19008EC941 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -208,6 +273,23 @@
 				B6CCD4602B79A1FA00E8D0DF /* SplashView.swift */,
 			);
 			path = Splash;
+			sourceTree = "<group>";
+		};
+		B6E75AEF2B7D777D00CD31DD /* Pokedex */ = {
+			isa = PBXGroup;
+			children = (
+				B6E75AF02B7D778D00CD31DD /* View */,
+			);
+			path = Pokedex;
+			sourceTree = "<group>";
+		};
+		B6E75AF02B7D778D00CD31DD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B67361252B7D789F00CF6ABC /* PokedexView.swift */,
+				B67361362B7D9C6500CF6ABC /* SearchBarView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -342,11 +424,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				B67D10F72B7945C3008EC941 /* OnboardingView.swift in Sources */,
+				B67361262B7D789F00CF6ABC /* PokedexView.swift in Sources */,
+				B67361312B7D7C3800CF6ABC /* BottomBarItensType.swift in Sources */,
 				B6CCD45C2B7994E600E8D0DF /* OnboardingViewModel.swift in Sources */,
+				B67361372B7D9C6500CF6ABC /* SearchBarView.swift in Sources */,
+				B673612A2B7D7A5200CF6ABC /* BottomBarView.swift in Sources */,
 				B6CCD4612B79A1FA00E8D0DF /* SplashView.swift in Sources */,
 				B687D5862B7A3BDD00B4678C /* FontMaker.swift in Sources */,
 				B6CCD45E2B79964D00E8D0DF /* OnboardingStep.swift in Sources */,
 				B644ED7E2B7941560066A0E5 /* PokedexApp.swift in Sources */,
+				B673612E2B7D7B4E00CF6ABC /* BottomBarItemView.swift in Sources */,
+				B67361342B7D7D5B00CF6ABC /* BottomBarItemModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
