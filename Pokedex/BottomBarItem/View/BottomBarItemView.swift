@@ -10,43 +10,45 @@ import SwiftUI
 struct BottomBarItemView: View {
 	
 	var bottomBarItem: BottomBarItensType
+	@Binding var selectedTab: BottomBarItensEnum
 	
 	var body: some View {
+		
+		let tabIsActived = selectedTab == bottomBarItem.itemEnum
 		
 		return Button {
 			buttonAction
 		} label: {
-			buttonLabel
+			buttonLabel(tabIsActived: tabIsActived)
 		}
 		.frame(width: 56, height: 56)
 	}
 	
 	var buttonAction: Void {
-		print(bottomBarItem.isActived)
+		withAnimation {
+			selectedTab = bottomBarItem.itemEnum
+		}
 	}
 	
-	var buttonLabel: some View {
-		VStack(alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/) {
+	func buttonLabel(tabIsActived: Bool) -> some View {
+		let icon = tabIsActived ? bottomBarItem.activedIcon : bottomBarItem.icon
+		let fontColor = tabIsActived ? "bluescale-00" : "grayscale-500"
+		
+		return VStack(alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/) {
 			Image(icon)
 				.resizable()
 				.scaledToFit()
 				.frame(width: 24, height: 24)
 			
-			Text(bottomBarItem.label)
-				.font(FontMaker.makeFont(.poppinsMedium, 12))
-				.foregroundStyle(Color(fontColor))
+			if tabIsActived {
+				Text(bottomBarItem.label)
+					.font(FontMaker.makeFont(.poppinsMedium, 12))
+					.foregroundStyle(Color(fontColor))
+			}
 		}
-	}
-	
-	var icon: String {
-		bottomBarItem.isActived == Bool(true) ?  bottomBarItem.activedIcon : bottomBarItem.icon
-	}
-	
-	var fontColor: String {
-		bottomBarItem.isActived == Bool(true) ?  "bluescale-00"	: "grayscale-500"
 	}
 }
 
 #Preview {
-	BottomBarItemView(bottomBarItem: bottomBarItens[0])
+	BottomBarItemView(bottomBarItem: bottomBarItens[0], selectedTab: .constant(.pokedex))
 }

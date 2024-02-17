@@ -81,7 +81,6 @@ struct OnboardingView: View {
 		
 		let trainerImage = index == 0 ? "trainersGroup" : "trainerHilda"
 		
-		
 		return ZStack {
 			Image(trainerImage)
 				.resizable()
@@ -115,7 +114,7 @@ struct OnboardingView: View {
 			})
 		} else {
 			NavigationLink {
-				PokedexView()
+				HomeView()
 			} label: {
 				buttonStyles(text: text)
 			}

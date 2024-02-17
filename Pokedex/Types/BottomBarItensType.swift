@@ -9,8 +9,8 @@ import Foundation
 
 struct BottomBarItensType: Identifiable {
 	let id: Int
-	let isActived: Bool
 	let label: String
 	let icon: String
 	let activedIcon: String
+	let itemEnum: BottomBarItensEnum
 }

@@ -8,19 +8,18 @@
 import SwiftUI
 
 struct PokedexView: View {
+	@State private var selectedTab: BottomBarItensEnum = .pokedex
+	
 	var body: some View {
-		
 		VStack {
 			SearchBarView()
-			Spacer()
-			BottomBarView()
 		}
 		.navigationBarHidden(true)
 		
 	}
-		
+	
 }
 
 #Preview {
-    PokedexView()
+	PokedexView()
 }
